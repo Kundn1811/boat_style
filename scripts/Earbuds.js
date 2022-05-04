@@ -18,7 +18,11 @@ let h1=document.createElement('h1')
     data.forEach(function(el){
         let container2=document.getElementById('main')
         let product=document.createElement('div')
-    
+        product.addEventListener("click",()=>{
+            let arr=[];
+            arr.push(el)
+            localStorage.setItem("details1",JSON.stringify(arr))
+        })
         let image=document.createElement('img')
             image.src=el.image
         let detailBox=document.createElement('div')
@@ -26,9 +30,18 @@ let h1=document.createElement('h1')
             rating.innerText=`* ${el.rating}`
         let title=document.createElement('h4')
             title.innerText=el.title
+        let priceBoxMain=document.createElement('div')
+        let priceBox=document.createElement('div')
         let price=document.createElement('p')
-            price.innerText=` ₹ ${el.price}`    
-            detailBox.append(rating,title,price)    
+        rating.innerHTML=`<i class="fa-solid fa-star "></i>${el.rating}`
+       
+        let strikedOffPrice=document.createElement('p')
+        strikedOffPrice.innerText=` ₹ ${Number(el.price)+30%Number(el.price)} `
+        priceBox.append(price,strikedOffPrice)
+
+       
+            priceBoxMain.append(priceBox)    
+            detailBox.append(rating,title,priceBoxMain)    
             product.append(image,detailBox)
 
             container2.append(product)
