@@ -1,0 +1,11 @@
+#container>img{
+    width: 100%;
+    height: auto;
+    margin-top: 65px;
+}
+body{
+    background-color: #252525;
+}
+h1{
+    color: white;
+}
