@@ -6,9 +6,9 @@ document.getElementById("footer").innerHTML=footer();
 //  let rData = data();
 //  console.log(rData);
 
- fetch("./scripts/rocerzdaData.json").then(res=>res.json()).then(res=>{
-console.log(res.data)
+ fetch("./data/rocerzData.json").then(res=>res.json()).then(res=>{
+console.log(res.rocerz)
  })
- fetch("./data/airpods.json").then(res=>res.json()).then(res=>{
-     console.log(res.airpods)
+ fetch("./data/BassHeads.json").then(res=>res.json()).then(res=>{
+     console.log(res.bassheads)
  })
