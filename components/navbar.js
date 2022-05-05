@@ -4,8 +4,8 @@ function navbar(){
     <img src="https://gumlet.assettype.com/swarajya%2F2021-01%2F7a6e91f6-5862-4ac5-bb08-eb5bf2a3e20c%2FboAt_logo.jpg?q=75&auto=format%2Ccompress&w=1200" alt="">
 </div>
 <div id="pages">
-    <a href="">Shop</a>
-    <a href="">Sail with boat</a>
+    <a href="" id="shop">Shop</a>
+   
     <a href="">More</a>
 </div>
 <div id="elements">
@@ -13,7 +13,46 @@ function navbar(){
     <i class="fa-solid fa-user"></i>
     <i class="fa-solid fa-gifts"></i>
     <i class="fa-solid fa-cart-shopping"></i>
-</div>`
+</div>
+
+`
+
+}
+
+function menu(){
+  return `   <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_540x.png?v=1612338251" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_540x.png?v=1612338387" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear_720x.jpg?v=1648546494" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895_540x.png?v=1612338356" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5_540x.png?v=1612338436" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a_540x.png?v=1622452897" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/bence-boros-253214-unsplash_720x.jpg?v=1648545875" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/New-Category-Banners_with-Trebal_09_720x.png?v=1615033153" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-limited-edition_540x.png?v=1612338560" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop_480x.png?v=1624859990" alt="">
+ </div>
+ <div class="menu_box" >
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image_720x.png?v=1626094103" alt="">
+ </div>`
 }
 
 function footer(){
@@ -78,4 +117,4 @@ function footer(){
   <div id="footer_bottom"></div>
 </div>`;
 }
-export {navbar,footer};
+export { navbar,footer,menu};
