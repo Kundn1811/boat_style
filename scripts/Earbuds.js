@@ -15,6 +15,7 @@ let h1=document.createElement('h1')
     })
 
     function main(data){
+        document.getElementById('items').innerText=`${data.length} products`
     data.forEach(function(el){
         let container2=document.getElementById('main')
         let product=document.createElement('div')
@@ -27,6 +28,7 @@ let h1=document.createElement('h1')
             image.src=el.image
         let detailBox=document.createElement('div')
         let rating=document.createElement('p')
+        rating.setAttribute('id','rating')
         rating.innerHTML=`<i class="fa-solid fa-star "></i> ${el.rating}`
             // rating.innerText=`* ${el.rating}`
         let title=document.createElement('h4')
@@ -51,10 +53,7 @@ let h1=document.createElement('h1')
             product.append(image,detailBox)
 
             container2.append(product)
-    })
-       
-
-        
+    })        
     }
-
+    
        
