@@ -30,20 +30,29 @@ let h1=document.createElement('h1')
             image.src=el.image
         let detailBox=document.createElement('div')
         let rating=document.createElement('p')
+
+        rating.innerHTML=`<i class="fa-solid fa-star "></i> ${el.rating}`
+      
            
+
         let title=document.createElement('h4')
             title.innerText=el.title
         let priceBoxMain=document.createElement('div')
+            priceBoxMain.setAttribute('id','priceBoxMain')
         let priceBox=document.createElement('div')
+            priceBox.setAttribute('id','priceBox')
+        let btn=document.createElement('button')
+            btn.innerText='ADD+'
         let price=document.createElement('p')
-        rating.innerHTML=`<i class="fa-solid fa-star "></i>${el.rating}`
+            price.innerText=`₹ ${el.price}`
+        
        
         let strikedOffPrice=document.createElement('p')
         strikedOffPrice.innerText=` ₹ ${Number(el.price)+30%Number(el.price)} `
         priceBox.append(price,strikedOffPrice)
 
        
-            priceBoxMain.append(priceBox)    
+            priceBoxMain.append(priceBox,btn)    
             detailBox.append(rating,title,priceBoxMain)    
             product.append(image,detailBox)
 
