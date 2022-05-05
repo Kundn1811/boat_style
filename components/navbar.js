@@ -4,9 +4,9 @@ function navbar(){
     <img src="https://gumlet.assettype.com/swarajya%2F2021-01%2F7a6e91f6-5862-4ac5-bb08-eb5bf2a3e20c%2FboAt_logo.jpg?q=75&auto=format%2Ccompress&w=1200" alt="">
 </div>
 <div id="pages">
-    <a href="" id="shop">Shop</a>
+    <a href="" id="shop">Shop<i class="fa-solid fa-angle-down"></i></a>
    
-    <a href="">More</a>
+    <a href="" id="other">More<i class="fa-solid fa-angle-down"></i></a>
 </div>
 <div id="elements">
     <input type="text" id="search" placeholder="Search...">
@@ -55,6 +55,17 @@ function menu(){
  </div>`
 }
 
+function more(){
+  return` <div>
+  <a href="">Gifting</a>
+  <a href="">Offer Zone</a>
+  <a href="">Do what Floats Your Boat</a>
+  <a href="">Meet the BoAtthreads</a>
+  <a href="">Corporate Order</a>
+  <a href="">Earn Rs.100</a>
+  <a href="">Careers</a>
+</div> `
+}
 function footer(){
     return `
     <div id="footer_body">
@@ -114,7 +125,15 @@ function footer(){
      <p>Investor Relations </p> 
     </div>
   </div>
-  <div id="footer_bottom"></div>
+  <div id="footer_bottom">
+  <div>
+    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_900x_aff68517-98f4-4a82-9aee-2405cea66251_350x.png?v=1650262054" alt="">
+    <h2>DOWNLOAD THE APP</h2>
+    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/google-play.png?v=1608620293" alt="">
+    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/app-store.png?v=1608620293" alt="">
+  </div>
+  <p>© 2022 Imagine Marketing Limited. All Rights Reserved.</p>
+</div>
 </div>`;
 }
-export { navbar,footer,menu};
+export { navbar,footer,menu,more};
