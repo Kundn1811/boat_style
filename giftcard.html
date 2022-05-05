@@ -5,63 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #mainwork>div{
-            border:1px solid black;
-            width: 100%;
-        }
-        #box1,#box3,#box6{
-             height: 700px;
-        }
-        #box2{
-            height: 300px;
-        }
-        #box4,#box5{
-            height: 400px;
-        }
-        #box1,#box4{
-            background-color: #212529;
-        }
-       #box1>#imagebox{
-           border-radius: 5px;
-           height: 550px;
-           width: 40%;
-           margin-top: 50px;
-           background-color: gray;
-       }
-       #box1>#contentbox{
-           border: 1px solid white;
-           border-radius: 5px;
-           height: 550px;
-           width: 40%;
-           margin-top: 50px;
-       }
-       #box1{
-           display: flex;
-           flex-direction: row;
-           justify-content: space-evenly;
-       }
-       #giftimg{
-           width: 100%;
-          -webkit-animation: mover 2s infinite  alternate;
-          animation: mover 2s infinite  alternate;
-        }
-       @-webkit-keyframes mover {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-20px); }
-        }
-       @keyframes mover {
-         0% { transform: translateY(0); }
-        100% { transform: translateY(-20px); }
-        }
-       
-       #box3,#box5{
-           background-color: red;
-       }
-       body{
-           background-color: black;
-       }
-    </style>
+    <link rel="stylesheet" href="./styles/giftcard.css">      
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
     <div id="navbar"></div>
@@ -69,27 +14,4 @@
     <div id="footer"></div>
 </body>
 </html>
-<script>
-    let box1=document.createElement("div");
-    box1.setAttribute("id","box1")
-         let imagebox=document.createElement("div")
-         imagebox.setAttribute("id","imagebox");
-         let img=document.createElement("img");
-         img.src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Gift-card-5000_612x.png?v=1615270911";
-         img.setAttribute("id","giftimg")
-         imagebox.append(img);
-         let contentbox=document.createElement("div");
-         contentbox.setAttribute("id","contentbox")
-         box1.append(imagebox,contentbox);
-    let box2=document.createElement("div");
-    box2.setAttribute("id","box2")
-    let box3=document.createElement("div");
-    box3.setAttribute("id","box3")
-    let box4=document.createElement("div");
-    box4.setAttribute("id","box4")
-    let box5=document.createElement("div");
-    box5.setAttribute("id","box5")
-    let box6=document.createElement("div");
-    box6.setAttribute("id","box6")
-    document.querySelector("#mainwork").append(box1,box2,box3,box4,box5,box6);
-</script>
+<script src="./scripts/giftcard.js"type="module"></script>

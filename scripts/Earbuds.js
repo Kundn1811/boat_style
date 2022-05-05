@@ -18,17 +18,23 @@ let h1=document.createElement('h1')
     data.forEach(function(el){
         let container2=document.getElementById('main')
         let product=document.createElement('div')
+
+           
         product.addEventListener("click",()=>{
             let arr=[];
             arr.push(el)
             localStorage.setItem("details1",JSON.stringify(arr))
         })
+
         let image=document.createElement('img')
             image.src=el.image
         let detailBox=document.createElement('div')
         let rating=document.createElement('p')
+
         rating.innerHTML=`<i class="fa-solid fa-star "></i> ${el.rating}`
-            // rating.innerText=`* ${el.rating}`
+      
+           
+
         let title=document.createElement('h4')
             title.innerText=el.title
         let priceBoxMain=document.createElement('div')
