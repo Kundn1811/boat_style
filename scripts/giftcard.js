@@ -1,10 +1,6 @@
 import { navbar ,footer} from "../components/navbar.js";
-document.getElementById('navbar').innerHTML=navbar()
+document.getElementById('navbar').innerHTML=navbar();
 document.getElementById('footer').innerHTML = footer();
-
-
-
-
 let mainbox=document.getElementById("mainwork");
 let box1=document.createElement("div");
     box1.setAttribute("id","box1")
@@ -23,7 +19,7 @@ let box1=document.createElement("div");
     // box2
     let box2=document.createElement("div");
     box2.setAttribute("id","box2")
-        btnbox=document.createElement("div");
+     let btnbox=document.createElement("div");
         btnbox.setAttribute("class","btnbox")
              let btn1=document.createElement("div");
              btn1.innerText="Description"
@@ -31,7 +27,7 @@ let box1=document.createElement("div");
              btn2.innerText="9 Reviews";
         btnbox.append(btn1,btn2);
 
-        descbox=document.createElement("div");
+      let descbox=document.createElement("div");
         descbox.setAttribute("class","alldiv1")
             let h2=document.createElement("h2");
             h2.innerText="Let Music Be the Best Gift";
@@ -105,3 +101,5 @@ let box1=document.createElement("div");
 
     box6.append(lastdiv,lastdiv2)
     mainbox.append(box1,box2,box3,box4,box5,box6);
+
+   
