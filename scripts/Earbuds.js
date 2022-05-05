@@ -19,9 +19,10 @@ let h1=document.createElement('h1')
         let container2=document.getElementById('main')
         let product=document.createElement('div')
         product.addEventListener("click",()=>{
-            let arr=[];
-            arr.push(el)
-            localStorage.setItem("details1",JSON.stringify(arr))
+            // let arr=[];
+            // arr.push(el)
+            localStorage.setItem("details1",JSON.stringify(el))
+            window.location.href="product.html";
         })
         let image=document.createElement('img')
             image.src=el.image
