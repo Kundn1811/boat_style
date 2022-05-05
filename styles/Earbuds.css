@@ -36,7 +36,7 @@ h1{
   
     background-color: white;
     text-align: left;
-    padding: 5px 5px 5px 5px;
+    padding: 20px 5px 5px 5px;
     padding-bottom: 2px;
     border-radius: 10px;
     margin: 5px;
@@ -44,4 +44,11 @@ h1{
 }
 #main>div>div>p,h4{
     margin-top: -10px;
+}
+#main>div>div~p{
+    color: red;
+}
+div>p~p{
+    text-decoration: line-through;
+    color: #838b94;
 }
