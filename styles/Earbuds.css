@@ -42,13 +42,38 @@ h1{
     margin: 5px;
 
 }
+#priceBoxMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -25px;
+}
+#priceBox{
+    display: flex;
+    flex: 1;
+    justify-content: left;
+}
 #main>div>div>p,h4{
     margin-top: -10px;
 }
-#main>div>div~p{
+#priceBox>p:first-child{
+    margin-right: 5px;
     color: red;
 }
-div>p~p{
+#priceBox>p:last-child{
     text-decoration: line-through;
     color: #838b94;
+    margin-right: 20px;
+}
+
+i{
+    color: red;
+}
+button{
+    border-radius: 5px ;
+  height: 25px;
+  border: 0;
+    background-color: red;
+    color: white;
+    font-weight: bold;
 }
