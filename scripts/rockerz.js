@@ -80,7 +80,7 @@ let h1=document.createElement('h1')
         
        
         let strikedOffPrice=document.createElement('p')
-        strikedOffPrice.innerText=` ₹ ${Number(el.price)+30%Number(el.price)} `
+        strikedOffPrice.innerText=` ₹ ${Number(el.price)+Math.round(Number(el.price)*62/100)} `
         priceBox.append(price,strikedOffPrice)
 
        
