@@ -1,3 +1,8 @@
+*{
+   font-family:sans-serif;
+}
+
+
 #mainwork>div{
     /* border:1px solid black; */
     width: 100%;
@@ -23,7 +28,7 @@
    background-color: gray;
 }
 #box1>#contentbox{
-   border: 1px solid white;
+   /* border: 1px solid white; */
    border-radius: 5px;
    height: 550px;
    width: 40%;
@@ -90,3 +95,66 @@ justify-content: space-evenly;
     padding-top: 50px;
     font-weight: bold;
 }
+#contentbox{
+   color:white;
+   padding-left: 20px;
+}
+#gifthead{
+   font-size: 40px;
+}
+#cardprice{
+   font-size: 22px;
+}
+#info{
+   display: flex;
+   font-size: 12px;
+}
+#discount{
+   display: flex;
+   font-size: 12px;
+   font-weight: bold;
+}
+#cashback_img{
+     max-width: 110px;
+     height: 20px;
+     padding-left: 13px;
+     padding-top: 10px;
+}
+#price_image{
+   display: flex;
+   justify-content: space-evenly;
+}
+#price_image>button{
+   background-color: #212529;
+   color:rgb(195, 195, 230);
+   font-size: 15px;
+   height: 40px;
+   width: 100px;
+   border: 0px;
+   margin-left: -100px;
+   /* margin-top: 20px; */
+   margin-bottom: 20px;
+}
+#price_image>button:hover{
+   border: 1px solid white;
+   border-radius: 5px;
+}
+#notify{
+   display: flex;
+   flex-direction: column;
+}
+#notify>button{
+   background-color: #999999;
+   height: 60px;
+   border: 0px;
+   width: 90%;
+   color: white;
+   font-weight: bolder;
+
+}
+#notify>button:nth-child(2){
+   background-color: red;
+   margin-top: 20px;
+
+}
+
