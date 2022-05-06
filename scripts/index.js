@@ -7,7 +7,7 @@ document.getElementById('footer').innerHTML = footer();
 document.getElementById("shop").addEventListener("click", () => {
     event.preventDefault()
     let menu = document.querySelectorAll("#menu");
-    console.log(menu)
+    
     if (menu[0].style.display == "grid") {
         menu[0].style.display = "none"
     } else {
