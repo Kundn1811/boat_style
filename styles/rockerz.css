@@ -7,11 +7,15 @@ body{
 #poster{
     width: 100%;
     height: auto;
-    margin-top: 65px;
+    /* margin-top: 65px; */
 }
-
-#container>h1,#discription>h1{
+h1{
     color: white;
+}
+#container>h1{
+    margin: 50px;
+    font-size: 45px;
+    line-height: 48px;
 }
 #main{
     display: grid;
@@ -128,4 +132,7 @@ select{
 }
 #relatedPosts>div>a{
     color: white;
+}
+#filter_icon{
+    margin-right: -50px;
 }
