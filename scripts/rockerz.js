@@ -35,13 +35,13 @@ let container=document.getElementById('container')
 
 let poster=document.createElement('img')
     poster.setAttribute('id','poster')
-    poster.src='https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes_Catgry-web_7cf20899-eb4a-427f-9a8a-799d7e1c37fa.jpg?v=1634716734'
+    poster.src='https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz-_Catgry_web_d201c6e3-e067-4280-a127-56a2e1b51399.jpg?v=1634806683'
 let h1=document.createElement('h1')
-    h1.innerText='Wireless Earbuds'
+    h1.innerText='Wireless Headphones'
     container.append(poster,h1) 
-    fetch("./Data/airpods.json").then(res => res.json()).then(data =>{
-        main(data.airpods)
-        console.log(data.airpods)
+    fetch("./Data/rocerzdata.json").then(res => res.json()).then(data =>{
+        main(data.rocerz)
+        console.log(data.rocerz)
     })
 
     function main(data){
@@ -55,7 +55,6 @@ let h1=document.createElement('h1')
             let arr=[];
             arr.push(el)
             localStorage.setItem("details1",JSON.stringify(arr))
-            window.location.href="product.html";
         })
 
         let image=document.createElement('img')
@@ -92,5 +91,3 @@ let h1=document.createElement('h1')
             container2.append(product)
     })        
     }
-    
-       

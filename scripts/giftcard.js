@@ -3,7 +3,32 @@ document.getElementById('navbar').innerHTML = navbar()
 document.getElementById("menu").innerHTML = menu()
 document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
-
+// <--------------------------------------navbar navigation function ------------------------------------------------->
+document.getElementById("shop").addEventListener("click", () => {
+    event.preventDefault()
+    let menu = document.querySelectorAll("#menu");
+    console.log(menu)
+    if (menu[0].style.display == "grid") {
+        menu[0].style.display = "none"
+    } else {
+        menu[0].style.display = "grid"
+    }
+    
+})
+document.getElementById("other").addEventListener("click", () => {
+    event.preventDefault();
+    let more = document.getElementById("more");
+     let da = more.children
+     console.log(da[0])
+     if(da[0].style.display == "none"){
+         
+         da[0].style.display = "block"
+        }else{
+            
+            da[0].style.display  = "none"
+     }
+    })
+    
 let mainbox=document.getElementById("mainwork");
 
 let box1=document.createElement("div");
@@ -201,4 +226,4 @@ let box1=document.createElement("div");
     box6.append(lastdiv,lastdiv2)
     mainbox.append(box1,box2,box3,box4,box5,box6);
 
-   
+

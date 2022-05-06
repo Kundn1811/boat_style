@@ -1,4 +1,3 @@
-
 body{
     background-color: #252525;
     font-family: 'Inter', sans-serif;
@@ -10,7 +9,8 @@ body{
     height: auto;
     margin-top: 65px;
 }
-h1{
+
+#container>h1,#discription>h1{
     color: white;
 }
 #main{
@@ -111,8 +111,6 @@ select{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    gap: 10px;
-    
 }
 #relatedPosts>div{
     background-color: #25272c;
@@ -131,4 +129,3 @@ select{
 #relatedPosts>div>a{
     color: white;
 }
-
