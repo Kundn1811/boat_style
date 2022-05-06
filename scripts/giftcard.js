@@ -21,9 +21,12 @@ let box1=document.createElement("div");
                 gifthead.setAttribute("id","gifthead");
 
          let stardiv=document.createElement("div");
+         stardiv.setAttribute("id","stardiv");
                 let star=document.createElement("i");
-                star.setAttribute("class","fa-solid fa-star");
+                star.setAttribute("id","star")
                 let view=document.createElement("p");
+                view.setAttribute("id","view")
+                stardiv.innerHTML=`<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>`
                 view.innerText="5(9 reviews)";
         stardiv.append(star,view);
 

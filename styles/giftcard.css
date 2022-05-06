@@ -52,6 +52,15 @@
  0% { transform: translateY(0); }
 100% { transform: translateY(-20px); }
 }
+#stardiv{
+   display: flex;
+}
+#stardiv>#view{
+   margin-top: 0px;
+}
+#stardiv>i{
+   color: red;
+}
 
 #box3,#box5{
    background-color: rgb(182, 14, 14);
