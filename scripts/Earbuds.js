@@ -29,6 +29,7 @@ let h1=document.createElement('h1')
         let image=document.createElement('img')
             image.src=el.image
         let detailBox=document.createElement('div')
+        detailBox.setAttribute("id","detailBox");
         let rating=document.createElement('p')
 
         rating.innerHTML=`<i class="fa-solid fa-star "></i> ${el.rating}`

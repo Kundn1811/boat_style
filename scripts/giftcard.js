@@ -94,8 +94,7 @@ let box1=document.createElement("div");
                notify1.innerText="SOLD OUT"
                let notify2=document.createElement("button");
                notify2.setAttribute("id","notify2");
-               notify2.innerText="NOTIFY ME"
-            
+               notify2.innerText="NOTIFY ME";
         notify.append(notify1,notify2)
 
     contentbox.append(gifthead,stardiv,pricediv,info,discount,price_image,notify);
@@ -189,7 +188,22 @@ let box1=document.createElement("div");
             // console.log(data.randomdata)
             for(let i =0;i<4;i++){
                 let product=document.createElement('div')
-                
+                   let last_img_div=document.createElement("div");
+                   let lastimage=document.createElement("img");
+                   lastimage.src=image;
+                   last_img_div.append(lastimage);
+                   let last_info=document.createElement("div");
+                   let last_rating=document.createElement("p");
+                   last_rating.innerText=rating;
+                   let last_title=document.createElement("h3");
+                   last_title.innerText=title;
+                   let last_price_div=document.createElement("div");
+                        let last_price=document.createElement("p")
+                        last_price.innerText=price;
+                        let last_btn=document.createElement("button");
+                        last_btn.innerText="ADD"
+                        last_btn.setAttribute("id","last_btn");
+                    last_price_div.append(last_price,last_btn) ;               
 
                 // product.addEventListener("click",()=>{
                 //     let arr=[];
@@ -197,7 +211,7 @@ let box1=document.createElement("div");
                 //     localStorage.setItem("details1",JSON.stringify(arr))
                 // })
 
-                // console.log(data.randomdata[i])
+                console.log(data.randomdata[i])
             }
         })
     
