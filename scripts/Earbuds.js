@@ -55,6 +55,7 @@ let h1=document.createElement('h1')
             let arr=[];
             arr.push(el)
             localStorage.setItem("details1",JSON.stringify(arr))
+            window.location.href="product.html";
         })
 
         let image=document.createElement('img')
