@@ -1,5 +1,7 @@
-import { navbar ,footer} from "../components/navbar.js";
-document.getElementById('navbar').innerHTML=navbar();
+import { navbar, footer, menu, more } from "../components/navbar.js";
+document.getElementById('navbar').innerHTML = navbar()
+document.getElementById("menu").innerHTML = menu()
+document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
 
 
@@ -24,9 +26,11 @@ let box1=document.createElement("div");
          stardiv.setAttribute("id","stardiv");
                 let star=document.createElement("i");
                 star.setAttribute("id","star")
+                for(let i=0;i<5;i++){
+                    stardiv.innerHTML+=`<i class="fa-solid fa-star">`;
+                }
                 let view=document.createElement("p");
-                view.setAttribute("id","view")
-                stardiv.innerHTML=`<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>`
+                view.setAttribute("id","view");
                 view.innerText="5(9 reviews)";
         stardiv.append(star,view);
 
@@ -89,9 +93,9 @@ let box1=document.createElement("div");
                notify1.setAttribute("id","notify1");
                notify1.innerText="SOLD OUT"
                let notify2=document.createElement("button");
-               notify1.setAttribute("id","notify2");
+               notify2.setAttribute("id","notify2");
                notify2.innerText="NOTIFY ME"
-            //    notify2.addEventListener()
+            
         notify.append(notify1,notify2)
 
     contentbox.append(gifthead,stardiv,pricediv,info,discount,price_image,notify);
@@ -182,7 +186,7 @@ let box1=document.createElement("div");
         let lastdiv2=document.createElement("div");
         fetch("./Data/randomdata.json").then(res => res.json()).then(data =>{
           
-            console.log(data.randomdata)
+            // console.log(data.randomdata)
             for(let i =0;i<4;i++){
                 let product=document.createElement('div')
                 
@@ -193,7 +197,7 @@ let box1=document.createElement("div");
                 //     localStorage.setItem("details1",JSON.stringify(arr))
                 // })
 
-                console.log(data.randomdata[i])
+                // console.log(data.randomdata[i])
             }
         })
     
