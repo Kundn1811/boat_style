@@ -24,7 +24,7 @@ function menu() {
    <a href="Earbuds.html">  <div class="menu_box">
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_540x.png?v=1612338251" alt="" href="Earbuds.html">
  </div></a>
- <a href="Earbuds.html">
+ <a href="rockerz.html">
  <div class="menu_box"  >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_540x.png?v=1612338387" alt="">
  </div></a>
