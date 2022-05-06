@@ -1,11 +1,17 @@
-import { navbar,footer } from "../components/navbar.js";
-document.getElementById("navbar").innerHTML=navbar();
-document.getElementById("footer").innerHTML=footer();
+import { navbar, footer} from "../components/navbar.js";
+import {show_data} from "./cart.js";
+
+show_data();
+document.getElementById('navbar').innerHTML = navbar()
+// document.getElementById("menu").innerHTML = menu()
+// document.getElementById("more").innerHTML = more()
+document.getElementById('footer').innerHTML = footer();
+
 let datacome=JSON.parse(localStorage.getItem("details1"))
 console.log(datacome)
 
 
-
+let arr=JSON.parse(localStorage.getItem("items"))||[];
 datacome.map(function(el){
     let img_box=document.createElement("img");
 img_box.src=el.image;
@@ -27,8 +33,14 @@ let price_div=document.createElement("div");
 price_div.setAttribute("id","price_div")
 price_div.append(price,strike,save)
 let add_cart=document.createElement("button");
-add_cart.addEventListener("click",function(){
-    show_data(el);
+add_cart.addEventListener("click",()=>{
+    
+ 
+  arr.push(el);
+  localStorage.setItem("items",JSON.stringify(arr));
+//   window.location.reload();
+//   show_data();
+
 })
 add_cart.setAttribute("id","add_cart")
 add_cart.innerHTML="ADD   TO   CART";
@@ -72,18 +84,37 @@ desc2.innerText=el.disc2;
 img2_div.append(img2,desc2)
 document.getElementById("img_div2").append(img2_div)
 })
-function show_data(el){
-    let box=document.createElement("div");
-    let img=document.createElement("img");
-    let price=document.createElement("h3");
-    let title=document.createElement("h3");
-   let box2=document.createElement("div");
+// let count=0;
+// function show_data(el){
+//     let box=document.createElement("div");
+//     let img=document.createElement("img");
+//     let price=document.createElement("h3");
+//     let title=document.createElement("h3");
+//    let box2=document.createElement("div");
+//    box.setAttribute("id","scroll_product")
 
-    title.innerText=el.title;
-    img.src=el.image;
-    price.innerText=el.price;
-    box2.append(title,price)
-    box.append(img,box2);
-    document.getElementById("not_main").append(box)
+//     title.innerText=el.title;
+//     img.src=el.image;
+//     price.innerText=el.price;
+//     let strike=document.createElement("p");
+//     strike.innerText=el.
+//     let buttoninc=document.createElement("button");
+//     buttoninc.addEventListener("click",()=>{
+//         increase(count)
+//     })
+//     let buttondec=document.createElement("button");
+//     buttondec.addEventListener("click",()=>{
+//         decrease(count)
+//     })
 
-}
+//     let count=document.createElement("h4");
+//     count.innerText=count;
+//     let removebtn=document.createElement("div");
+//     removebtn.innerHTML=`<i class="fa-solid fa-trash"></i>`;
+
+//     box2.append(title,price)
+//     box.append(img,box2);
+//     document.getElementById("not_main_scroll").append(box)
+//     // document.getElementById("god").addEventListener("scroll")
+
+// }

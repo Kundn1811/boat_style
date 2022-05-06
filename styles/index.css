@@ -11,7 +11,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0;float:left;
+  width:100%;
 
 }
 
@@ -53,7 +54,7 @@ body {
 }
 
 #more{
-   
+  
   width: 35%;
   margin: auto;
   margin-top: 4.2rem;
@@ -65,9 +66,9 @@ body {
   padding: 10px 20px;
   font-size: 17px;
   background-color: black;
-  position: absolute;
+  position:absolute;
   display: none;
-  z-index: 1;
+  z-index: 3;
 }
 #more>div>a{
   color: aliceblue;

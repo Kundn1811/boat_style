@@ -21,9 +21,9 @@ let h1=document.createElement('h1')
 
            
         product.addEventListener("click",()=>{
-            // let arr=[];
-            // arr.push(el)
-            localStorage.setItem("details1",JSON.stringify(el))
+            let arr=[];
+            arr.push(el)
+            localStorage.setItem("details1",JSON.stringify(arr))
             window.location.href="product.html";
         })
 

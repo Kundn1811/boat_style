@@ -8,6 +8,13 @@
     }
   }
    */  
+   #god{
+     float:left;
+     position:absolute;
+     display:flex;
+     flex-direction:column;
+     width:100%;
+   }
    
    #main{
     display:flex;
@@ -15,7 +22,7 @@
     justify-content: space-evenly;
    height: 600px;
    float:left;
-   width:100%
+   width:100%;
    
    /* margin-top:80px; */
    /* object-fit: contain; */
@@ -24,6 +31,8 @@
   /* border:1px solid red; */
   height:40px;
   width: 100%;
+  margin-top:60px;
+  padding-bottom: 20px;;
   background-color: rgb(36, 31, 31);
   /* float:left; */
 /* position: relative; */
@@ -33,10 +42,10 @@
 #tag>p{
   color:rgb(161, 154, 154);
   font-size: 15px;;
-  margin-top:4.2rem;
+  /* margin-top:4.2rem; */
   text-align: start;
   margin-left:20px;
-  padding-top:10px;
+  padding-top:30px;
   /* float:left; */
 }
 #right_box{
@@ -167,19 +176,91 @@ padding-bottom:30px;
   width:170px;
 }
 #not_main{
-  float: left;
-  position: absolute;
-  right:0px;
-  height:600px;
-  background-color: white;;
+  /* float: left; */
+  /* position: absolute; */
+  right:0;
+  top:0;
+  width:500px;
+  height:100%;
+  background-color:white;
+  
+  
 }
-#not_main>div{
+
+/* .content {
+    max-width: 98.57rem;
+    margin: 2rem auto;
+    box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.75);
+    min-height: 100%;
+}  */
+
+/* #not_main>div{
   display:flex;
   border:1px solid black;
   justify-content: space-between;
+  background-color: tomato;
+  transition-duration: 5s;
   
-}
+} */
 #not_main img{
   height: 100px;
   width:100px;;
+}
+/* experiment */
+.backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+#not_main {
+  
+  /* background-color: #97ceaa;/ */
+  position: fixed;
+  top: 50%;
+  transform: translateX(0%) translateY(-50%);
+}
+#not_main i{
+  background-color: white;
+  color:black;
+  cursor: pointer;
+}
+#not_main_scroll{
+  overflow-y:scroll;
+  height:60vh;
+  flex-direction: column;
+  
+}
+#not_main_scroll>div{
+  display: flex;
+  border:1px solid grey;
+}
+#remove_box{
+  display:flex;
+  /* border:1px solid black; */
+  width:350px;
+  justify-content: space-between;
+  margin-top:-15px;
+}
+#remove_box button{
+  border-radius: 50%;
+  
+}
+#but_box {
+  display:flex;
+  gap:10px;
+}
+#price_box{
+  display: flex;
+  justify-content: space-between;
+  width:100px;
+  text-align: center;
+  margin-top:-40px;
+}
+#strike_not{
+  text-decoration: line-through;
 }

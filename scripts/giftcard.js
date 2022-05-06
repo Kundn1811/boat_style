@@ -1,7 +1,8 @@
-import { navbar ,footer} from "../components/navbar.js";
-document.getElementById('navbar').innerHTML=navbar();
+import { navbar, footer, menu, more } from "../components/navbar.js";
+document.getElementById('navbar').innerHTML = navbar()
+document.getElementById("menu").innerHTML = menu()
+document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
-
 
 let mainbox=document.getElementById("mainwork");
 
