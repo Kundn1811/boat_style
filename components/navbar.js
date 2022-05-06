@@ -1,5 +1,5 @@
-function navbar(){
-    return`
+function navbar() {
+  return `
     <div id="logo">
     <img src="https://gumlet.assettype.com/swarajya%2F2021-01%2F7a6e91f6-5862-4ac5-bb08-eb5bf2a3e20c%2FboAt_logo.jpg?q=75&auto=format%2Ccompress&w=1200" alt="">
 </div>
@@ -19,44 +19,64 @@ function navbar(){
 
 }
 
-function menu(){
-  return `   <div class="menu_box" >
-  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_540x.png?v=1612338251" alt="">
- </div>
- <div class="menu_box" >
+function menu() {
+  return `
+   <a href="Earbuds.html">  <div class="menu_box">
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_540x.png?v=1612338251" alt="" href="Earbuds.html">
+ </div></a>
+ <a href="Earbuds.html">
+ <div class="menu_box"  >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_540x.png?v=1612338387" alt="">
- </div>
+ </div></a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear_720x.jpg?v=1648546494" alt="">
  </div>
+ </a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895_540x.png?v=1612338356" alt="">
  </div>
+ </a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5_540x.png?v=1612338436" alt="">
  </div>
+ </a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a_540x.png?v=1622452897" alt="">
  </div>
+ </a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/bence-boros-253214-unsplash_720x.jpg?v=1648545875" alt="">
  </div>
+ </a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/New-Category-Banners_with-Trebal_09_720x.png?v=1615033153" alt="">
  </div>
+ </a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-limited-edition_540x.png?v=1612338560" alt="">
  </div>
+ </a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop_480x.png?v=1624859990" alt="">
  </div>
+ </a>
+ <a href="Earbuds.html">
  <div class="menu_box" >
   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image_720x.png?v=1626094103" alt="">
- </div>`
+ </div>
+ </a> `
 }
 
-function more(){
-  return` <div>
+function more() {
+  return ` <div>
   <a href="">Gifting</a>
   <a href="">Offer Zone</a>
   <a href="">Do what Floats Your Boat</a>
@@ -66,8 +86,8 @@ function more(){
   <a href="">Careers</a>
 </div> `
 }
-function footer(){
-    return `
+function footer() {
+  return `
     <div id="footer_body">
     <div>
       <div >
@@ -136,4 +156,4 @@ function footer(){
 </div>
 </div>`;
 }
-export { navbar,footer,menu,more};
+export { navbar, footer, menu, more };
