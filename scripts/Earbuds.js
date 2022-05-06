@@ -1,6 +1,36 @@
-import { navbar ,footer} from "../components/navbar.js";
-document.getElementById('navbar').innerHTML=navbar()
+import { navbar, footer, menu, more } from "../components/navbar.js";
+document.getElementById('navbar').innerHTML = navbar()
+document.getElementById("menu").innerHTML = menu()
+document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
+//<------------------------------------------------------navigation funcationality--------------------------------------->
+document.getElementById("shop").addEventListener("click", () => {
+    event.preventDefault()
+    let menu = document.querySelectorAll("#menu");
+    
+    if (menu[0].style.display == "grid") {
+        menu[0].style.display = "none"
+    } else {
+        menu[0].style.display = "grid"
+    }
+    
+})
+document.getElementById("other").addEventListener("click", () => {
+    event.preventDefault();
+    let more = document.getElementById("more");
+     let da = more.children
+     console.log(da[0])
+     if(da[0].style.display == "none"){
+         
+         da[0].style.display = "block"
+        }else{
+            
+            da[0].style.display  = "none"
+     }
+
+})
+
+
 let container=document.getElementById('container')
 
 let poster=document.createElement('img')
@@ -15,6 +45,7 @@ let h1=document.createElement('h1')
     })
 
     function main(data){
+        document.getElementById('items').innerText=`${data.length} products`
     data.forEach(function(el){
         let container2=document.getElementById('main')
         let product=document.createElement('div')
@@ -31,7 +62,8 @@ let h1=document.createElement('h1')
         let detailBox=document.createElement('div')
         detailBox.setAttribute("id","detailBox");
         let rating=document.createElement('p')
-
+ 
+        rating.setAttribute('id','rating')
         rating.innerHTML=`<i class="fa-solid fa-star "></i> ${el.rating}`
       
            
@@ -58,10 +90,7 @@ let h1=document.createElement('h1')
             product.append(image,detailBox)
 
             container2.append(product)
-    })
-       
-
-        
+    })        
     }
-
+    
        
