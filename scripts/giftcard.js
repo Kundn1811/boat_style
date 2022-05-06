@@ -1,7 +1,7 @@
 import { navbar, footer, menu, more } from "../components/navbar.js";
-document.getElementById('navbar').innerHTML = navbar();
-document.getElementById("menu").innerHTML = menu();
-document.getElementById("more").innerHTML = more();
+document.getElementById('navbar').innerHTML = navbar()
+document.getElementById("menu").innerHTML = menu()
+document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
 // <--------------------------------------navbar navigation function ------------------------------------------------->
 document.getElementById("shop").addEventListener("click", () => {
@@ -27,10 +27,8 @@ document.getElementById("other").addEventListener("click", () => {
             
             da[0].style.display  = "none"
      }
-
-})
-
-// <------------------------------------------------gift page functionality------------------------------------------------->
+    })
+    
 let mainbox=document.getElementById("mainwork");
 
 let box1=document.createElement("div");
@@ -228,4 +226,4 @@ let box1=document.createElement("div");
     box6.append(lastdiv,lastdiv2)
     mainbox.append(box1,box2,box3,box4,box5,box6);
 
-   
+
