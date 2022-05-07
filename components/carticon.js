@@ -17,7 +17,7 @@ function slidebox(){
         </div>
         <div id="total">
           <h3>Total:</h3>
-          <h3></h3>
+          <h3 id="amount"></h3>
         </div>
         <div id="card">
           <button id="upi">Pay Via UPI/COD</button>

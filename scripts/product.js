@@ -4,8 +4,13 @@ document.getElementById("menu").innerHTML = menu()
 document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
 // <--------------------------------------navbar navigation function ------------------------------------------------->
+let sum=0;
 let items = JSON.parse(localStorage.getItem("items"))
-console.log(items.length)
+for(let i=0;i<=items.length-1;i++){
+sum=sum+Number(items[i].price);
+localStorage.setItem("price",JSON.stringify(sum))
+}
+console.log(sum)
 let cart = document.getElementsByClassName("fa-cart-shopping");
 console.log(cart)
 if(items.length>0){
