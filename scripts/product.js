@@ -30,9 +30,9 @@ document.getElementById("other").addEventListener("click", () => {
     })
 
 
-import {show_data} from "./cart.js";
+import {show_data,showas_data} from "./cart.js";
 
-show_data();
+
 
 let datacome=JSON.parse(localStorage.getItem("details1"))
 console.log(datacome)
@@ -62,11 +62,11 @@ price_div.append(price,strike,save)
 let add_cart=document.createElement("button");
 add_cart.addEventListener("click",()=>{
     
- 
+    showas_data(el);
   arr.push(el);
   localStorage.setItem("items",JSON.stringify(arr));
 //   window.location.reload();
-//   show_data();
+//   showas_data(el,index);
 
 })
 add_cart.setAttribute("id","add_cart")
@@ -111,8 +111,20 @@ desc2.innerText=el.disc2;
 img2_div.append(img2,desc2)
 document.getElementById("img_div2").append(img2_div)
 })
+show_data();
+
+let amount_int=document.getElementById("amount");
+amount_int.innerText=sum;
+console.log(sum)
+
+
+
+
+
+
+
 // let count=0;
-// function show_data(el){
+// function showas_data(el){
 //     let box=document.createElement("div");
 //     let img=document.createElement("img");
 //     let price=document.createElement("h3");
