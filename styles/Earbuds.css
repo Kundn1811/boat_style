@@ -73,7 +73,7 @@ h1{
 #rating>i{
     color: red;
 }
-button{
+.btnadd{
     border-radius: 5px ;
     height: 25px;
     border: 0;
