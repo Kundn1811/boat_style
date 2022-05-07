@@ -33,24 +33,22 @@ document.getElementById("other").addEventListener("click", () => {
 
 let container = document.getElementById('container')
 
-let poster=document.createElement('img')
-    poster.setAttribute('id','poster')
-    poster.src='https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes_Catgry-web_7cf20899-eb4a-427f-9a8a-799d7e1c37fa.jpg?v=1634716734'
-let h1=document.createElement('h1')
-    h1.innerText='Wireless Earbuds'
-    container.append(poster,h1) 
-    fetch("./Data/airpods.json").then(res => res.json()).then(data =>{
-        main(data.airpods)
-       // console.log(data.airpods)
-    })
+let poster = document.createElement('img')
+poster.setAttribute('id', 'poster')
+poster.src = 'https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes_Catgry-web_7cf20899-eb4a-427f-9a8a-799d7e1c37fa.jpg?v=1634716734'
+let h1 = document.createElement('h1')
+h1.innerText = 'Wireless Earbuds'
+container.append(poster, h1)
+fetch("./Data/airpods.json").then(res => res.json()).then(data => {
+    main(data.airpods)
+    console.log(data.airpods)
+})
 
-    function main(data){
-        document.getElementById('main').innerHTML = null 
-        document.getElementById('items').innerText=`${data.length} products`
-
-    data.forEach(function(el){
-        let container2=document.getElementById('main')
-        let product=document.createElement('div')
+function main(data) {
+    document.getElementById('items').innerText = `${data.length} products`
+    data.forEach(function (el) {
+        let container2 = document.getElementById('main')
+        let product = document.createElement('div')
 
 
         product.addEventListener("click", () => {
@@ -101,42 +99,3 @@ document.querySelector(".backdrop").innerHTML = slidebox();
 
 import { show_data } from "./cart.js";
 show_data();
-
-  
-
-document.getElementById("Sort").addEventListener("change",sort)
-
-    function sort(){
-     
-        fetch("./Data/airpods.json").then(res => res.json()).then(data =>{
-           
-            console.log(data.airpods)
-            var selected = document.querySelector("#Sort").value;
-            console.log(selected);
-            if(selected =="htl"){
-                data.airpods.sort(function(a,b){
-                    return b.price - a.price;
-                })
-                main(data.airpods)
-               // console.log(data.airpods)
-            }
-
-            if (selected == "lth") {
-                data.airpods.sort(function (a, b) {
-                  return a.price - b.price
-          
-                })
-                main(data.airpods)
-                //console.log(data.airpods)
-                
-              }
-              if(selected == "bs"){
-                main(data.airpods)
-              }
-        })
-
-       
-        
-    }
-    
-       
