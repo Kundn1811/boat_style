@@ -41,7 +41,7 @@ let h1=document.createElement('h1')
     container.append(poster,h1) 
     fetch("./Data/rocerzdata.json").then(res => res.json()).then(data =>{
         main(data.rocerz)
-        console.log(data.rocerz)
+        // console.log(data.rocerz)
     })
 
     function main(data){
@@ -55,6 +55,7 @@ let h1=document.createElement('h1')
             let arr=[];
             arr.push(el)
             localStorage.setItem("details1",JSON.stringify(arr))
+            window.location.href="product.html";
         })
 
         let image=document.createElement('img')
@@ -90,4 +91,57 @@ let h1=document.createElement('h1')
 
             container2.append(product)
     })        
+    }
+    document.getElementById("Sort").addEventListener("change",sort)
+    
+    function sort(){
+     document.getElementById('main').innerHTML=""
+        fetch("./Data/rocerzdata.json").then(res => res.json()).then(data =>{
+           
+            console.log(data.rocerz)
+            var selected = document.querySelector("#Sort").value;
+            console.log(selected);
+            if (selected == "bs") {
+                main(data.rocerz)
+            }
+            if(selected =="htl"){
+                data.rocerz.sort(function(a,b){
+                    return b.price - a.price;
+                })
+                main(data.rocerz)
+               // console.log(data.rocerz)
+            }
+
+            if (selected == "lth") {
+                data.rocerz.sort(function (a, b) {
+                  return a.price - b.price
+          
+                })
+                main(data.rocerz)
+                //console.log(data.rocerz)
+                
+              }
+              if (selected == "inc") {
+                data.rocerz.sort(function (a, b) {
+                  return a.title - b.title
+          
+                })
+                main(data.rocerz)
+                //console.log(data.rocerz)
+                
+              }
+              if (selected == "dec") {
+                data.rocerz.sort(function (a, b) {
+                  return b.title - a.title
+          
+                })
+                main(data.rocerz)
+                //console.log(data.rocerz)
+                
+              }
+              if(selected == ""){
+                main(data.rocerz)
+              }
+        })
+ 
     }
