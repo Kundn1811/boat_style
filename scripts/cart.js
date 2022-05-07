@@ -1,7 +1,7 @@
 let data=JSON.parse(localStorage.getItem("items"));
 console.log(data);
 // let count=1;
-let sum=0;
+
 function show_data(){
 data.map((el,index)=>{
     let count=1;
@@ -31,7 +31,8 @@ data.map((el,index)=>{
     })
     
     //  sum=sum+Number(el.price)
-    // document.getElementById("amount").innerText=sum;
+    let totalprice=JSON.parse(localStorage.getItem("price"))
+    document.getElementById("amount").innerText=totalprice;
 
     let but_box=document.createElement("div")
     but_box.setAttribute("id","but_box")
@@ -144,4 +145,5 @@ data.map((el,index)=>{
           localStorage.setItem("items",JSON.stringify(data));
           window.location.reload();
       }
+      
 export {show_data,showas_data}
