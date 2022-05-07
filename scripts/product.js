@@ -113,9 +113,9 @@ document.getElementById("img_div2").append(img2_div)
 })
 show_data();
 
-let amount_int=document.getElementById("amount");
-amount_int.innerText=sum;
-console.log(sum)
+// let amount_int=document.getElementById("amount");
+// amount_int.innerText=sum;
+// console.log(sum)
 
 
 
