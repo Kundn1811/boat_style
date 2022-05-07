@@ -12,7 +12,7 @@ function navbar() {
     <input type="text" id="search" placeholder="Search...">
     <i class="fa-solid fa-user"></i>
     <i class="fa-solid fa-gifts"></i>
-    <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-cart-shopping" ></i>
 </div>
 
 `
