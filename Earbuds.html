@@ -8,9 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/Earbuds.css">
+    <link rel="stylesheet" href="./styles/product.css">
     
 </head>
 <body>
@@ -24,6 +26,8 @@
      
   
     </div>
+
+
     
     <div id="container"> </div>
     <div id="filter">
@@ -39,6 +43,8 @@
         </div>
     </div>
     <div id="main"></div>
+    
+    <!-- <div class="backdrop"></div> -->
     <div id="discription">
         <h1>Airdopes - The Top Rated Bluetooth Earbuds in the Market</h1>
         <p>Airdopes offer the most incredible listening experience with revolutionary 
@@ -102,8 +108,30 @@
             <p><a href="https://www.boat-lifestyle.com/blogs/blog/5-reasons-to-switch-to-a-pair-of-wireless-earphones">Read More</a></p>
         </div>
     </div>
+    
     <div id="footer"></div>
-  
+    <div class="backdrop"></div>
 </body>
 </html>
 <script src="./scripts/Earbuds.js" type="module"></script>
+<!-- <script src="./scripts/cart.js" type="module"></script> -->
+<script>
+    $(document).ready(function() {
+  $(".fa-cart-shopping").click(function() {
+    $(".backdrop").fadeTo(200, 1);
+  });
+  $("#but2").click(function() {
+    $(".backdrop").fadeOut(200);
+  });
+  });
+  </script>
+  <script>
+    $(document).ready(function() {
+  $(".btnadd").click(function() {
+    $(".backdrop").fadeTo(200, 1);
+  });
+  $("#but2").click(function() {
+    $(".backdrop").fadeOut(200);
+  });
+  });
+  </script>

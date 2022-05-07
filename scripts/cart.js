@@ -1,7 +1,7 @@
-let data=JSON.parse(localStorage.getItem("items"))||[];
+let data=JSON.parse(localStorage.getItem("items"));
 console.log(data);
 // let count=1;
-let sum=0;
+
 function show_data(){
 data.map((el,index)=>{
     let count=1;
@@ -151,4 +151,5 @@ data.map((el,index)=>{
           localStorage.setItem("items",JSON.stringify(data));
           window.location.reload();
       }
+      
 export {show_data,showas_data}
