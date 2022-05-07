@@ -4,9 +4,10 @@ document.getElementById("menu").innerHTML = menu()
 document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
 
-let register = async (e) =>{
-    e.preventDefault();
-
+let register = () =>{
+    event.preventDefault()
+    console.log(1)
+   let arr = JSON.parse(localStorage.getItem("credentials"))||[]
     let form_data ={
         firstname: document.getElementById("fname").value,
         lastname: document.getElementById("lname").value,
@@ -14,17 +15,10 @@ let register = async (e) =>{
         password: document.getElementById("password").value,
     };
    
-    form_data =JSON.stringify(form_data);
-
-    let res = await fetch("https://masai-api-mocker.herokuapp.com/auth/register",{
-        method: "POST",
-        body: form_data,
-        headers:{
-            "Content-Type": "application/json",
-        },
-    });
-
-    let data =await res.json();
-    console.log(data);
+arr.push(form_data);
+  localStorage.setItem('credentials',JSON.stringify(arr))
+  alert("Your account has been created")
+  window.location.href = "login.html"
+   
 };
-document.getElementById("submit").addEventListener("click", register);
+document.getElementById("form").addEventListener("submit",register)

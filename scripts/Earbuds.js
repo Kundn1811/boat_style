@@ -41,11 +41,13 @@ let h1=document.createElement('h1')
     container.append(poster,h1) 
     fetch("./Data/airpods.json").then(res => res.json()).then(data =>{
         main(data.airpods)
-        console.log(data.airpods)
+       // console.log(data.airpods)
     })
 
     function main(data){
+        document.getElementById('main').innerHTML = null 
         document.getElementById('items').innerText=`${data.length} products`
+
     data.forEach(function(el){
         let container2=document.getElementById('main')
         let product=document.createElement('div')
@@ -91,6 +93,41 @@ let h1=document.createElement('h1')
 
             container2.append(product)
     })        
+    }
+
+document.getElementById("Sort").addEventListener("change",sort)
+
+    function sort(){
+     
+        fetch("./Data/airpods.json").then(res => res.json()).then(data =>{
+           
+            console.log(data.airpods)
+            var selected = document.querySelector("#Sort").value;
+            console.log(selected);
+            if(selected =="htl"){
+                data.airpods.sort(function(a,b){
+                    return b.price - a.price;
+                })
+                main(data.airpods)
+               // console.log(data.airpods)
+            }
+
+            if (selected == "lth") {
+                data.airpods.sort(function (a, b) {
+                  return a.price - b.price
+          
+                })
+                main(data.airpods)
+                //console.log(data.airpods)
+                
+              }
+              if(selected == "bs"){
+                main(data.airpods)
+              }
+        })
+
+       
+        
     }
     
        
