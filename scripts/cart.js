@@ -16,6 +16,13 @@ data.map((el,index)=>{
     title.innerText=el.title;
     img.src=el.image;
     price.innerText=`₹ ${el.price}`;
+ 
+     sum +=Number(el.price);
+    
+
+     let amount = document.getElementById("amount")
+     amount.innerText = sum
+
     let strike=document.createElement("p");
     strike.innerText=`₹ ${Number(el.price)*2}`
     strike.setAttribute("id","strike_not")
@@ -30,10 +37,7 @@ data.map((el,index)=>{
         decrease(count--)
     })
     
-    //  sum=sum+Number(el.price)
-    let totalprice=JSON.parse(localStorage.getItem("price"))
-    document.getElementById("amount").innerText=totalprice;
-
+   
     let but_box=document.createElement("div")
     but_box.setAttribute("id","but_box")
     let count_value=document.createElement("h4");
@@ -71,11 +75,12 @@ data.map((el,index)=>{
           }
         }
       })
+
+     
     }
-    // document.getElementById("god").addEventListener("scroll")
-
-    // let count=1;
-
+ 
+ 
+    // console.log(sum)
  function showas_data(el){
      let index = data.length-1
    let count=1;
@@ -111,6 +116,7 @@ data.map((el,index)=>{
     removebtn.addEventListener("click",()=>{
         remove(el,index)
     })
+    //sum=sum+el.price;
     removebtn.innerHTML=`<i class="fa-solid fa-trash"></i>`
      let price_box=document.createElement("div");
      price_box.setAttribute("id","price_box")
