@@ -4,6 +4,7 @@ document.getElementById("menu").innerHTML = menu()
 document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
 
+
 let data = JSON.parse(localStorage.getItem("credentials"))
 
 let login =  () => {
@@ -32,6 +33,7 @@ let login =  () => {
 };
 document.getElementById("form").addEventListener("submit",login)
 
+
 let user = document.getElementsByClassName("fa-user");
 user[0].addEventListener("click",()=>{
     window.location.href="signUp.html"
@@ -46,3 +48,4 @@ logo.addEventListener("click",()=>{
     window.location.href = "index.html"
     
 })
+
