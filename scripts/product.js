@@ -141,3 +141,7 @@ logo.addEventListener("click",()=>{
     window.location.href = "index.html"
     
 })
+let checkout = document.getElementById("atm");
+checkout.addEventListener("click",()=>{
+    window.location.href = "checkout.html";
+})
