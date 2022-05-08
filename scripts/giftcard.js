@@ -226,4 +226,17 @@ let box1=document.createElement("div");
     box6.append(lastdiv,lastdiv2)
     mainbox.append(box1,box2,box3,box4,box5,box6);
 
-
+    let user = document.getElementsByClassName("fa-user");
+    user[0].addEventListener("click",()=>{
+        window.location.href="signUp.html"
+    })
+    let gifts = document.getElementsByClassName("fa-gifts");
+    gifts[0].addEventListener("click",()=>{
+        window.location.href="giftcard.html"
+    })
+    
+    let logo = document.getElementById("logo");
+    logo.addEventListener("click",()=>{
+        window.location.href = "index.html"
+        
+    })
