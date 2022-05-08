@@ -4,6 +4,20 @@ document.getElementById("menu").innerHTML = menu()
 document.getElementById("more").innerHTML = more()
 document.getElementById('footer').innerHTML = footer();
 // <--------------------------------------navbar navigation function ------------------------------------------------->
+let sum=0;
+let items = JSON.parse(localStorage.getItem("items"))
+for(let i=0;i<=items.length-1;i++){
+sum=sum+Number(items[i].price);
+localStorage.setItem("price",JSON.stringify(sum))
+}
+console.log(sum)
+let cart = document.getElementsByClassName("fa-cart-shopping");
+console.log(cart)
+if(items.length>0){
+    cart[0].style.color = "red"
+}else{
+    cart[0].style.color = "white"
+}
 document.getElementById("shop").addEventListener("click", () => {
     event.preventDefault()
     let menu = document.querySelectorAll("#menu");
@@ -65,7 +79,7 @@ add_cart.addEventListener("click",()=>{
     showas_data(el);
   arr.push(el);
   localStorage.setItem("items",JSON.stringify(arr));
-//   window.location.reload();
+    // window.location.reload();
 //   showas_data(el,index);
 
 })
@@ -91,7 +105,7 @@ let img_div=document.createElement("div");
 img_div.append(img_box)
 img_box.setAttribute("id","img_box")
 img_div.setAttribute("id","img_div")
-document.getElementById("main").append(img_div,box)
+document.getElementById("main_product").append(img_div,box)
 let tag_line=document.createElement("p");
 tag_line.innerText=`HOME / ${el.title}`;
 document.getElementById("tag").append(tag_line)
@@ -113,47 +127,3 @@ document.getElementById("img_div2").append(img2_div)
 })
 show_data();
 
-let amount_int=document.getElementById("amount");
-amount_int.innerText=sum;
-console.log(sum)
-
-
-
-
-
-
-
-// let count=0;
-// function showas_data(el){
-//     let box=document.createElement("div");
-//     let img=document.createElement("img");
-//     let price=document.createElement("h3");
-//     let title=document.createElement("h3");
-//    let box2=document.createElement("div");
-//    box.setAttribute("id","scroll_product")
-
-//     title.innerText=el.title;
-//     img.src=el.image;
-//     price.innerText=el.price;
-//     let strike=document.createElement("p");
-//     strike.innerText=el.
-//     let buttoninc=document.createElement("button");
-//     buttoninc.addEventListener("click",()=>{
-//         increase(count)
-//     })
-//     let buttondec=document.createElement("button");
-//     buttondec.addEventListener("click",()=>{
-//         decrease(count)
-//     })
-
-//     let count=document.createElement("h4");
-//     count.innerText=count;
-//     let removebtn=document.createElement("div");
-//     removebtn.innerHTML=`<i class="fa-solid fa-trash"></i>`;
-
-//     box2.append(title,price)
-//     box.append(img,box2);
-//     document.getElementById("not_main_scroll").append(box)
-//     // document.getElementById("god").addEventListener("scroll")
-
-// }
