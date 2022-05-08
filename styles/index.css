@@ -24,6 +24,7 @@ body {
 #logo>img {
   width: 35%;
   height: 5rem;
+  cursor: pointer;
 }
 
 #pages>a {
@@ -217,4 +218,10 @@ body {
 #footer_bottom>div{
     display: flex;
     justify-content: space-around;
+}
+.fa-solid{
+  cursor: pointer;
+}
+.fa-solid:hover{
+  color: rgb(243, 115, 115);
 }
