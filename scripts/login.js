@@ -15,7 +15,7 @@ let login =  () => {
     var check = false;
     for (var i = 0; i < data.length; i++) {
         // console.log(data[i])
-        if (data[i].email == email && data[i].pass == password) {
+        if (data[i].email == email && data[i].password == password) {
             check = true;
          }
      }
@@ -31,3 +31,18 @@ let login =  () => {
      
 };
 document.getElementById("form").addEventListener("submit",login)
+
+let user = document.getElementsByClassName("fa-user");
+user[0].addEventListener("click",()=>{
+    window.location.href="signUp.html"
+})
+let gifts = document.getElementsByClassName("fa-gifts");
+gifts[0].addEventListener("click",()=>{
+    window.location.href="giftcard.html"
+})
+
+let logo = document.getElementById("logo");
+logo.addEventListener("click",()=>{
+    window.location.href = "index.html"
+    
+})

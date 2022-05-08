@@ -22,3 +22,17 @@ arr.push(form_data);
    
 };
 document.getElementById("form").addEventListener("submit",register)
+let user = document.getElementsByClassName("fa-user");
+user[0].addEventListener("click",()=>{
+    window.location.href="signUp.html"
+})
+let gifts = document.getElementsByClassName("fa-gifts");
+gifts[0].addEventListener("click",()=>{
+    window.location.href="giftcard.html"
+})
+
+let logo = document.getElementById("logo");
+logo.addEventListener("click",()=>{
+    window.location.href = "index.html"
+    
+})

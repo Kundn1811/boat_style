@@ -99,3 +99,18 @@ document.querySelector(".backdrop").innerHTML = slidebox();
 
 import { show_data } from "./cart.js";
 show_data();
+
+let user = document.getElementsByClassName("fa-user");
+user[0].addEventListener("click",()=>{
+    window.location.href="signUp.html"
+})
+let gifts = document.getElementsByClassName("fa-gifts");
+gifts[0].addEventListener("click",()=>{
+    window.location.href="giftcard.html"
+})
+
+let logo = document.getElementById("logo");
+logo.addEventListener("click",()=>{
+    window.location.href = "index.html"
+    
+})
